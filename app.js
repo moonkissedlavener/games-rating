@@ -7,7 +7,7 @@ const gameRouteController = require("./controllers/game");
 const defaultRouteController = require("./controllers/default");
 const voteRouteController = require("./controllers/vote");
 
-const PORT = 3004
+const PORT = 3007
 
 
 
@@ -24,9 +24,10 @@ const server = http.createServer((req, res) => {
                  voteRouteController(req, res);
         break;
         default: defaultRouteController(res, url);
+        break;
           
     }
   });
 
-  server.listen(3004);
+  server.listen(3007);
   //я не понимаю что не так ааааа
